@@ -1,15 +1,23 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+//const redisdb = require('./app/asserts/redis-db');
+const redis = require('redis');
 const router = require('./app/router');
 const config = require('./config');
 
-const app = express();
+const server = async () => {
+  const app = express();
 
-app.use(cookieParser());
-app.use(bodyParser.json());
-app.use(router);
+  app.locals.redis = redis.createClient();
 
-app.listen(config.server.port);
+  app.use(cookieParser());
+  app.use(bodyParser.json());
+  app.use(router);
 
-module.exports = app;
+  app.listen(config.server.port);
+
+  return app;
+};
+
+module.exports = server();

@@ -1,4 +1,4 @@
-class Cookies {
+class CookiesHTTPOnly {
   constructor(req, res) {
     this.req = req;
     this.res = res;
@@ -22,4 +22,4 @@ class Cookies {
   }
 }
 
-module.exports = Cookies;
+module.exports = CookiesHTTPOnly;

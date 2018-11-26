@@ -1,7 +1,7 @@
 {
   "name": "golos",
   "version": "0.0.1",
-  "description": "Test task for Node.js",
+  "description": "Test task for Node.js on Express.js",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -28,7 +28,9 @@
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
-    "redis": "^2.8.0"
+    "pwd-fs": "^1.0.4",
+    "redis": "^2.8.0",
+    "type-enforcement": "^1.0.12"
   },
   "devDependencies": {}
 }

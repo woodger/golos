@@ -1,5 +1,12 @@
 {
   "server": {
     "port": 8080
+  },
+  "redisdb": {
+    "host": "127.0.0.1",
+    "port": 6379,
+    "user": "travis",
+    "passwd": "",
+    "db": "test"
   }
 }
